@@ -5,7 +5,7 @@
   body {
     font-family: "Poppins", sans-serif;
     margin: 0;
-    background-color: #333;
+    background: linear-gradient(135deg, #2D3748, #CBD5E0);
   }
   
 
@@ -41,16 +41,14 @@
 
 .container{
     color: white;
-    background-color: black;
+    background: linear-gradient(to top, #b8300b, #ff4d4d);
     font-size: 1.6em;
     margin-left: 25%;
     margin-right:25%;
-   
-  }
+}
 
   #text{
     text-align: center;
-
   }
   
   #images {
