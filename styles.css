@@ -71,4 +71,9 @@ button{
   margin-top: 15px;
   height: 22px;
   font-size: 14px;
+  transition: transform 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-4px);
 }
