@@ -23,7 +23,7 @@ input.onkeypress = function(event) {
 
 //this changes the text and puts in your characters name
 let changeText = function(words) {
-  text.innerHTML = words.replace("Your character", character);
+  text.innerHTML = (words || "").replace("Your character", character || "");
 };
 
 //this takes the image link and puts it in the proper format, sending it to the html
@@ -35,6 +35,7 @@ let changeImage = function(img) {
 //this looks at the number of options we have set and creates enough buttons 
 let changeButtons = function(buttonList) {
   buttonBox.innerHTML = "";
+  buttonList = buttonList || [];
   for (let i = 0; i < buttonList.length; i++) {
     buttonBox.innerHTML += "<button onClick="+buttonList[i][1]+">" + buttonList[i][0] + "</button>";
   };
@@ -55,6 +56,10 @@ let advanceTo = function(s) {
 //this is the object that holds each scenario, the more you add the more options there are
 //scenario = {}
 let scenario = {
+  zero:{
+    image: "./img/ETG.png",
+    text: "This website game was developed by Choicest Fruit and its interns. To contact everyone who worked on this page, here are the GitHub Profiles. <br> <br> Choicest Fruit: https://github.com/Choicest-Fruit-LLC <br> Keshav Korattur: https://github.com/kk2ktr2011-cloud",
+  },
   one: {
     image: "./img/ETG.png", //Ethical Tech image
     text: "This is an ethical technology text-based game with interactive experience where players are presented with scenarios and dilemmas related to the ethical considerations and implications of technology development and use. The game involves making choices that impact various stakeholders, such as users, society, and the environment, and encourages players to reflect on the consequences of their decisions.<br><br> What is your name?\n",
@@ -141,4 +146,7 @@ let scenario = {
 
 
 //this is the code that starts the game
-advanceTo(scenario.one);
+let isContactPage = window.location.pathname.toLowerCase().includes("contact.html");
+let isIndexPage = window.location.pathname.toLowerCase().endsWith("index.html") || window.location.pathname === "/";
+let startScenario = isContactPage ? scenario.zero : scenario.one;
+advanceTo(startScenario);
