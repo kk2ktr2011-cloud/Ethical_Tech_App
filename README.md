@@ -1,1 +1,3 @@
 # Ethical_Tech_App
+
+This website is a game designed to test your ethics through a series of choices presented throughout the game. The choices you make will decide upon which resolution you will end up with. To start the game, go to any page of the website and enter your name. After that, click enter to start the game. Press the buttons as directed to decide upon whether you choose choice A or choice B.
