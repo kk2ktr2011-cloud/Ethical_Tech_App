@@ -56,6 +56,9 @@ let advanceTo = function(s) {
 //this is the object that holds each scenario, the more you add the more options there are
 //scenario = {}
 let scenario = {
+  negativeone: {
+    image: "./img/ETG.png"
+  },
   zero:{
     image: "./img/ETG.png",
     text: "This website game was developed by Choicest Fruit and its interns. To contact everyone who worked on this page, here are the GitHub Profiles. <br> <br> Choicest Fruit: https://github.com/Choicest-Fruit-LLC <br> Keshav Korattur: https://github.com/kk2ktr2011-cloud",
@@ -147,6 +150,7 @@ let scenario = {
 
 //this is the code that starts the game
 let isContactPage = window.location.pathname.toLowerCase().includes("contact.html");
+let isCreatorsPage = window.location.pathname.toLowerCase().includes("creators.html");
 let isIndexPage = window.location.pathname.toLowerCase().endsWith("index.html") || window.location.pathname === "/";
-let startScenario = isContactPage ? scenario.zero : scenario.one;
+let startScenario = isContactPage ? scenario.zero : isCreatorsPage ? scenario.negativeone : scenario.one;
 advanceTo(startScenario);
