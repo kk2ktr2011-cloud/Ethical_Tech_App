@@ -57,7 +57,8 @@ let advanceTo = function(s) {
 //scenario = {}
 let scenario = {
   negativeone: {
-    image: "./img/ETG.png"
+    image: "./img/ETG.png",
+    text: "The creators of this website work for Choicest Fruit. This project was built in 2024 and aims to give people a test of of their ethics. This project was later edited by Keshav Korattur, an intern at Choicest Fruit."
   },
   zero:{
     image: "./img/ETG.png",
